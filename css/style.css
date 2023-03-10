@@ -40,6 +40,8 @@ html {
   font-weight: lighter;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  animation: slideIn 2s ease-out;
+  backface-visibility: hidden;
 }
 .btn-pokemon,
 .btn-pokemon:link,
@@ -115,6 +117,20 @@ html {
   }
 }
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0%;
+  }
+  80% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 40%;
@@ -126,16 +142,16 @@ html {
     grid-template-rows: repeat(5, 1fr);
   }
 }
-.popup {
+.overlay {
   position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(93, 92, 92, 0.834);
   backdrop-filter: blur(2rem);
-  z-index: 2;
+  z-index: 1;
 }
 
-.popup-box-top {
+.popup-box {
   border: 0.3rem solid #6a236f;
   border-radius: 1rem;
   transform: translate(-50%, -50%);
@@ -148,6 +164,7 @@ html {
   box-shadow: 0.5rem 1rem 3rem 0.1rem rgba(0, 0, 0, 0.492);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  z-index: 2;
 }
 .popup-content {
   font-size: 3rem;
@@ -173,7 +190,6 @@ html {
   margin: 2rem;
   padding: 0.5rem;
   box-shadow: 0.5rem 0.5rem 2rem 0.1rem rgba(0, 0, 0, 0.492);
-  transition: all 0.4s ease;
 }
 .popup-button:hover {
   transform: translateY(-2px);
@@ -182,4 +198,8 @@ html {
 .popup-button:active {
   transform: translateY(2px);
   box-shadow: 0.5rem 0.5rem 2rem 0.1rem rgba(0, 0, 0, 0.492);
+}
+
+.hidden {
+  visibility: hidden;
 }
