@@ -78,7 +78,7 @@ html {
 }
 
 .main-pokemon {
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: relative;
@@ -123,6 +123,11 @@ html {
 }
 .popup-img {
   width: 75%;
+}
+
+.popup-title,
+.pokemon-name {
+  text-transform: uppercase;
 }
 
 @keyframes shake {
@@ -172,12 +177,14 @@ html {
   grid-template-columns: 1fr 1fr;
   z-index: 2;
 }
-.popup-content-detail {
+.popup-content-detail,
+.popup-content {
   font-size: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .popup-title {
   margin: 1rem;
 }
@@ -210,15 +217,39 @@ html {
   visibility: hidden;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
   html {
-    font-size: 40%;
+    font-size: 45%;
   }
 
   .main-pokemon {
     top: 60%;
     grid-template-columns: repeat(4, 1fr);
   }
+  .pokemon {
+    width: 12rem;
+  }
+  .pokemon-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
+
+  .main-pokemon {
+    top: 55%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .pokemon {
+    width: 12rem;
+  }
+  .pokemon-name {
+    font-size: 1.5rem;
+  }
+
   .popup-box {
     grid-template-columns: 1fr;
   }
