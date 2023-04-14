@@ -179,6 +179,7 @@ html {
 }
 .popup-content-detail,
 .popup-content {
+  position: relative;
   font-size: 3rem;
   display: flex;
   flex-direction: column;
@@ -191,6 +192,9 @@ html {
 .popup-button,
 .popup-button:link,
 .popup-button:visited {
+  position: absolute;
+  bottom: 1vh;
+
   cursor: pointer;
   font-size: 3rem;
   color: whitesmoke;
@@ -258,5 +262,16 @@ html {
 
   .popup-box {
     grid-template-columns: 1fr;
+  }
+  .popup-content-detail {
+    align-items: start;
+  }
+
+  .popup-button {
+    position: relative;
+    bottom: 10vh;
+  }
+  .popup-button-catch {
+    bottom: 1vh;
   }
 }
