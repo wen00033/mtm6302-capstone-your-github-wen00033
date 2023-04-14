@@ -20,7 +20,7 @@ html {
 .banner {
   background-image: linear-gradient(to right, #4700d8, #6a236f);
   width: 100vw;
-  height: 75vh;
+  height: 55vh;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 95%);
   position: relative;
 }
@@ -73,12 +73,12 @@ html {
   z-index: -1;
   background-image: linear-gradient(to right, #efe812, #ff8000);
   width: 100vw;
-  height: 80vh;
+  height: 65vh;
   margin-top: -20vh;
 }
 
 .main-pokemon {
-  top: 40%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: relative;
@@ -221,6 +221,9 @@ html {
   html {
     font-size: 45%;
   }
+  .main {
+    height: 80vh;
+  }
 
   .main-pokemon {
     top: 60%;
@@ -238,9 +241,12 @@ html {
   html {
     font-size: 40%;
   }
+  .main {
+    height: 75vh;
+  }
 
   .main-pokemon {
-    top: 55%;
+    top: 60%;
     grid-template-columns: repeat(4, 1fr);
   }
   .pokemon {
